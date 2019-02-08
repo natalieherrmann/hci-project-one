@@ -25,12 +25,16 @@ main {
 }
 
 h1 {
+  background: linear-gradient(45deg, #3a0b42, #469696);
+  color: #FBFDFD;
   font-size: 1.563em;
   line-height: 1.375em; /* Adds another 22px */
   padding: 0.6875em; /* (22px / 2) / 16px */
+  text-shadow: 0.0625em 0.0625em 0.3125em #ffbab3;
 }
 
 h2, form {
+  color: #3a0b42;
   font-size: 1.205em;
   line-height: 1.71875em; /* (22px + 22/4px) / 16 */
 }
@@ -42,6 +46,7 @@ p {
 }
 
 input {
+  background-color: #469696;
   box-sizing: border-box; /* Avoid horizontal scrolling */
   border: 0;
   font-size: inherit;
@@ -51,6 +56,35 @@ input {
   padding: 0.3125em; /* 5px / 16px */
 }
 
+input:active,
+input:focus {
+  background-color: #9ac5c5;
+}
+
+input[type="radio"],
+.radio-field > label {
+  cursor: pointer;
+}
+
+#submit {
+  cursor: pointer;
+}
+
+#submit:hover,
+#submit:active,
+#submit:focus {
+  background-color: #816386;
+}
+
 .field {
   padding-bottom: 0.6875em; /* 11px / 16px */
+}
+
+.field > label {
+  color: #3a0b42;
+  display: block;
+}
+
+.field > input {
+  width: 100%;
 }
