@@ -18,6 +18,44 @@
       Fill in the form below to become a valued member of our community. You may
       also choose to sign-up for updates and newsletters.
     </p>
+    <form id="signup">
+      <ol id="signup-fields">
+        <li class="field">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" />
+        </li>
+        <li class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" />
+        </li>
+        <li class="field">
+          <fieldset>
+            <legend>Subscription preference</legend>
+            <ol>
+              <li class="radio-field">
+                <input type="radio" id="daily" name="preferences" />
+                <label for="daily">Daily</label>
+              </li>
+              <li class="radio-field">
+                <input type="radio" id="weekly" name="preferences" />
+                <label for="weekly">Weekly</label>
+              </li>
+              <li class="radio-field">
+                <input type="radio" id="monthly" name="preferences" />
+                <label for="monthly">Monthly</label>
+              </li>
+              <li class="radio-field">
+                <input type="radio" id="none" name="preferences" checked />
+                <label for="none">None</label>
+              </li>
+            </ol>
+          </fieldset>
+        </li>
+        <li class="field">
+          <input type="submit" id="submit" name="submit" value="Sign Up!" />
+        </li>
+      </ol>
+    </form>
   </main>
 <script src="assets/js/site.js"></script>
 </body>
