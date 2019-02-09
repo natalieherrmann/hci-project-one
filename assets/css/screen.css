@@ -61,11 +61,14 @@ input:focus {
   background-color: #9ac5c5;
 }
 
-input[type="radio"],
-.radio-field > label {
-  cursor: pointer;
+input:hover,
+input[type="radio"]:focus {
+    outline: 0.0625em auto #469696;
 }
 
+
+label,
+input[type="radio"],
 #submit {
   cursor: pointer;
 }
