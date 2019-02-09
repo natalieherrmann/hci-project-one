@@ -88,3 +88,12 @@ input[type="radio"],
 .field > input {
   width: 100%;
 }
+
+#submit:disabled {
+  opacity: 0.4;
+}
+
+#submit:disabled:hover {
+  background-color: #469696;
+  cursor: not-allowed;
+}
