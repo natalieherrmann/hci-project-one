@@ -15,7 +15,11 @@
   }
 
   function checkEmail(email) {
-    if (email.length >= 1) {
+    var valid_email = /^[^@]+@[^@]+$/g;
+    // Checks that email starts with a non '@' characters,
+    // includes one '@', followed by non '@' characters
+    email = email.replace(/\s/g, ''); // Removes whitespace
+    if (email.length >= 1 && valid_email.test(email)) {
       return true;
     }
     else {
