@@ -51,6 +51,10 @@
       if (name_done && email_done) {
         form_submit.removeAttribute('disabled');
       }
+      // Disables the Submit button again if Name or Email become invalid
+      else {
+        form_submit.setAttribute('disabled', 'disabled');
+      }
     }
   });
 
