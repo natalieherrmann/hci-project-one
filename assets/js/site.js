@@ -5,6 +5,24 @@
     return;
   }
 
+  function checkName(name) {
+    if (name.length >= 1) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
+  function checkEmail(email) {
+    if (email.length >= 1) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
   // Run JS once DOM is loaded
   document.addEventListener('DOMContentLoaded', function() {
 
@@ -19,19 +37,13 @@
     form_submit.setAttribute('disabled', 'disabled');
 
     name_input.addEventListener('keyup', function(){
-      var name = this.value;
-      if (name.length >= 1) {
-        name_done = true;
-        doneYet();
-      }
+      name_done = checkName(this.value);
+      doneYet();
     });
 
     email_input.addEventListener('keyup', function(){
-      var email = this.value;
-      if (email.length >= 1) {
-        email_done = true;
-        doneYet();
-      }
+      email_done = checkEmail(this.value);
+      doneYet();
     });
 
     // Enables the Submit button if both Name and Email are complete
