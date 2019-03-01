@@ -44,14 +44,44 @@
     // If user refreshed page, there may be valid input from before
     doneYet();
 
+    // Create an area for showing hints next to form labels
+    document.querySelector("#name-label").innerHTML += ' <p id="name-error"></p>';
+    document.querySelector("#email-label").innerHTML += ' <p id="email-error"></p>';
+
     name_input.addEventListener('keyup', function(){
       name_done = checkName(this.value);
+      if (name_done) {
+        document.querySelector("#name-error").innerText = '';
+      }
       doneYet();
+    });
+
+    name_input.addEventListener('blur', function(){
+      var name = document.querySelector("#name-error");
+      if (!name_done) {
+        name.innerText = 'Enter your name';
+      }
+      else {
+        name.innerText = '';
+      }
     });
 
     email_input.addEventListener('keyup', function(){
       email_done = checkEmail(this.value);
+      if (email_done) {
+        document.querySelector("#email-error").innerText = '';
+      }
       doneYet();
+    });
+
+    email_input.addEventListener('blur', function(){
+      var email = document.querySelector("#email-error");
+      if (!email_done) {
+        email.innerText = 'Email must include @';
+      }
+      else {
+        email.innerText = '';
+      }
     });
 
     // Enables the Submit button if both Name and Email are complete

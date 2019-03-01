@@ -95,11 +95,23 @@ input[type="radio"]:focus {
 
 .field > label {
   color: #3a0b42;
-  display: block;
+  display: inline-block;
 }
 
 .field > input {
   width: 100%;
+}
+
+#email-error,
+#name-error {
+  color: #262626;
+  display: inline-block; /* Shares line with label */
+  font-size: 0.64em;
+  line-height: 1.71875em; /* Same as label */
+  padding-bottom: 0;
+  padding-left: 1.71875em;
+  text-decoration: underline;
+  vertical-align: 5%; /* Line-up bottom of underline with label */
 }
 
 #submit:disabled {
