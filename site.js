@@ -33,12 +33,16 @@
     var form_submit = document.querySelector('#submit');
     var name_input = document.querySelector('#name');
     var email_input = document.querySelector('#email');
-    var name_done = false;
-    var email_done = false;
+    var name_done = checkName(name_input.value);
+    var email_done = checkEmail(email_input.value);
 
     // Prohibit users from clicking 'Submit' until they seem to complete the
     // Name and Email input
     form_submit.setAttribute('disabled', 'disabled');
+
+    // Check if inputs are valid after page load
+    // If user refreshed page, there may be valid input from before
+    doneYet();
 
     name_input.addEventListener('keyup', function(){
       name_done = checkName(this.value);
