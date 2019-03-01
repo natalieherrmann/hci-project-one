@@ -56,14 +56,10 @@
       doneYet();
     });
 
+    // Add alert if name field is incomplete when user the clicks off
+    // Remove alert if field is complete
     name_input.addEventListener('blur', function(){
-      var name = document.querySelector("#name-error");
-      if (!name_done) {
-        name.innerText = 'Enter your name';
-      }
-      else {
-        name.innerText = '';
-      }
+      nameAlert();
     });
 
     email_input.addEventListener('keyup', function(){
@@ -74,14 +70,10 @@
       doneYet();
     });
 
+    // Add alert if email field is incomplete when user the clicks off
+    // Remove alert if field is complete
     email_input.addEventListener('blur', function(){
-      var email = document.querySelector("#email-error");
-      if (!email_done) {
-        email.innerText = 'Email must include @';
-      }
-      else {
-        email.innerText = '';
-      }
+      emailAlert();
     });
 
     // Enables the Submit button if both Name and Email are complete
@@ -92,6 +84,26 @@
       // Disables the Submit button again if Name or Email become invalid
       else {
         form_submit.setAttribute('disabled', 'disabled');
+      }
+    }
+
+    function nameAlert() {
+      var name = document.querySelector("#name-error");
+      if (!name_done) {
+        name.innerText = 'Enter your name';
+      }
+      else {
+        name.innerText = '';
+      }
+    }
+
+    function emailAlert() {
+      var email = document.querySelector("#email-error");
+      if (!email_done) {
+        email.innerText = 'Email must include @';
+      }
+      else {
+        email.innerText = '';
       }
     }
   });
