@@ -76,6 +76,18 @@
       emailAlert();
     });
 
+    // Toggle alerts when user hovers over the Submit button
+    form_submit.addEventListener('mouseover', function(){
+      nameAlert();
+      emailAlert();
+    });
+
+    // Toggle alerts when user taps the Submit button (mobile)
+    form_submit.addEventListener('touchstart', function(){
+      nameAlert();
+      emailAlert();
+    });
+
     // Enables the Submit button if both Name and Email are complete
     function doneYet() {
       if (name_done && email_done) {
