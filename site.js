@@ -111,7 +111,10 @@
 
     function emailAlert() {
       var email = document.querySelector("#email-error");
-      if (!email_done) {
+      if (!email_done && email_input.value.length === 0) {
+        email.innerText = 'Enter your email';
+      }
+      else if (!email_done) {
         email.innerText = 'Email must include @';
       }
       else {
