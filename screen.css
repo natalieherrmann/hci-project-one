@@ -14,6 +14,8 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
   Modular Scale: 1.25 (https://www.modularscale.com/?16&px&1.25)
 */
 
+/* ========== Base Styles ========== */
+
 html {
   background: #FBFDFD;
   color: #262626;
@@ -33,11 +35,6 @@ h1 {
   line-height: 1.375em; /* Adds another 22px */
   padding: 0.6875em; /* (22px / 2) / 16px */
   text-shadow: 0.0625em 0.0625em 0.3125em #ffbab3;
-}
-
-h1 > a {
-  text-decoration: none;
-  color: inherit;
 }
 
 h2, label {
@@ -65,6 +62,8 @@ input {
   padding: 0.3125em; /* 5px / 16px */
 }
 
+/* ========== Layout Styles ========== */
+
 #submit {
   background-color: #816386;
   color: #FBFDFD;
@@ -72,26 +71,17 @@ input {
   margin-top: 1.71875em; /* Match line-height of Label text */
 }
 
-input:active,
-input:focus {
-  background-color: #9ac5c5;
+/* ========== Module Styles ========== */
+
+h1 > a {
+  text-decoration: none;
+  color: inherit;
 }
 
 label,
 input[type="radio"],
 #submit {
   cursor: pointer;
-}
-
-input:hover,
-input[type="radio"]:focus {
-  outline: 0.0625em auto #469696;
-}
-
-#submit:hover,
-#submit:active,
-#submit:focus {
-  background-color: #6f7d96;
 }
 
 .field {
@@ -107,6 +97,32 @@ input[type="radio"]:focus {
   width: 100%;
 }
 
+/* ========== State Styles ========== */
+
+input:active,
+input:focus {
+  background-color: #9ac5c5;
+}
+
+input:hover {
+  outline: 0.0625em auto #469696;
+}
+
+#submit:hover,
+#submit:active,
+#submit:focus {
+  background-color: #6f7d96;
+}
+
+#submit:disabled {
+  opacity: 0.7;
+}
+
+#submit:disabled:hover {
+  background-color: #344868;
+  cursor: not-allowed;
+}
+
 #email-error,
 #name-error {
   color: #262626;
@@ -117,15 +133,6 @@ input[type="radio"]:focus {
   padding-left: 1.71875em;
   text-decoration: underline;
   vertical-align: 5%; /* Line-up bottom of underline with label */
-}
-
-#submit:disabled {
-  opacity: 0.7;
-}
-
-#submit:disabled:hover {
-  background-color: #344868;
-  cursor: not-allowed;
 }
 
 @media screen and (min-width: 720px) {
