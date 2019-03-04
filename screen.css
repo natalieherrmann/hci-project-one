@@ -60,6 +60,7 @@ input {
   margin: 0;
   outline: 0;
   padding: 0.3125em; /* 5px / 16px */
+  -webkit-appearance: none; /* Prevents iOS web browsers from changing styling */
 }
 
 /* ========== Layout Styles ========== */
@@ -79,7 +80,6 @@ h1 > a {
 }
 
 label,
-input[type="radio"],
 #submit {
   cursor: pointer;
 }
